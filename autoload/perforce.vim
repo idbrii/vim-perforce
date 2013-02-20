@@ -3410,7 +3410,7 @@ function! s:EditP4WinName(preview, nWindows)
   endif
   if bug
     echohl ERROR
-    echomsg "Please report this error message:"
+    echomsg "Please report this vim-perforce error message:"
     echomsg "\t".exception
     echomsg
     echomsg "with the following information:"
