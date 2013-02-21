@@ -3318,6 +3318,8 @@ function! s:GotoWindow(outputType, clearBuffer, p4OrgFileName, cmdCompleted)
       call genutils#MoveCursorToWindow(bufWinnr)
     else
       exec s:_('SplitCommand')
+      " TODO: Sometimes, this will give an error (maybe long filenames?)
+      " Could we force a scratch buffer before setting the name?
       call s:EditP4WinName(0, nWindows)
     endif
     if s:errCode == 0
